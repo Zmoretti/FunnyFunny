@@ -14,23 +14,25 @@ public class FunnySound extends JFrame implements KeyListener {
 
     public void keyPressed(KeyEvent e) {
         // Check if the pressed key is 'A' (for example)
-       // if (e.getKeyCode() == KeyEvent.VK_A) {
-            try {
-                // Assuming you have a sound file named "funny_sound.wav" in the same directory
-                File soundFile = new File("C:\\Users\\Zach\\Documents\\workspace\\FunnySounds\\src\\FartToot.wav");
-                AudioInputStream audioIn = AudioSystem.getAudioInputStream(soundFile);
-                Clip clip = AudioSystem.getClip();
-                clip.open(audioIn);
-                clip.start();
-            } catch (UnsupportedAudioFileException | IOException | LineUnavailableException ex) {
-                ex.printStackTrace();
-            }
+        // if (e.getKeyCode() == KeyEvent.VK_A) {
+        try {
+            // Assuming you have a sound file named "funny_sound.wav" in the same directory
+            File soundFile = new File("C:\\Users\\Zach\\Documents\\workspace\\FunnySounds\\src\\FartToot.wav");
+            AudioInputStream audioIn = AudioSystem.getAudioInputStream(soundFile);
+            Clip clip = AudioSystem.getClip();
+            clip.open(audioIn);
+            clip.start();
+        } catch (UnsupportedAudioFileException | IOException | LineUnavailableException ex) {
+            ex.printStackTrace();
         }
+    }
 
 
-    public void keyReleased(KeyEvent e) { }
+    public void keyReleased(KeyEvent e) {
+    }
 
-    public void keyTyped(KeyEvent e) { }
+    public void keyTyped(KeyEvent e) {
+    }
 
     public static void main(String[] args) {
         new FunnySound();
